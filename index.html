@@ -8,7 +8,9 @@
 
         <!-- Links -->
         <link rel="stylesheet" href="styles.css">
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="favicon" href="images/favicon-dark.png">
+        <!--type="image/x-icon">-->
+        <!--<link rel="alternate favicon" href="images/favicon-light.png" type="image/x-icon">-->
     </head>
     <body>
         <input id="text_box">
@@ -16,5 +18,15 @@
 
         <!-- Scripts -->
         <script type="module" src="scripts/init.mjs"></script>
+        <script type="module">
+            import { Page } from './scripts/init.mjs';
+    
+            let page;
+    
+            // Wait for the DOM content to be fully loaded
+            document.addEventListener('DOMContentLoaded', () => {
+                page = new Page();
+            });
+        </script>
     </body>
 </html>
